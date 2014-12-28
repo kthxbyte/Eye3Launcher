@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cl.eye3.eye3launcher" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <!-- java.lang.RuntimeException: Unable to start activity
+        ComponentInfo{cl.eye3.eye3launcher/cl.eye3.eye3launcher.HomeActivity}:
+        java.lang.IllegalStateException:
+        You need to use a Theme.AppCompat theme (or descendant) with this activity.
+        android:theme="@android:style/Theme.Wallpaper.NoTitleBar.Fullscreen">
+        -->
+
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:stateNotNeeded="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
